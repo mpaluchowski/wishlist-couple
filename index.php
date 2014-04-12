@@ -38,7 +38,10 @@ include("./list.inc.php");
 			<?php endforeach; // foreach ($item['features'] as $feature) ?>
 			</ul>
 
-			<a href="<?php echo $item['link'] ?>">Check It Out</a>
+			<footer>
+				<a href="<?php echo $item['link'] ?>" class="check-out">Check It Out!</a>
+				<a href="#" class="claim">Claim It!</a>
+			</footer>
 		</article></li><?php endforeach; // foreach ($items as $item) ?>
 	</ul>
 <?php endforeach; // foreach ($wishlists as $wishlist => $items) ?>
