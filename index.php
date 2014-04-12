@@ -9,7 +9,7 @@ include("./list.inc.php");
 	<meta charset="utf-8">
 	<title>M&amp;M Wishlist</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href='//fonts.googleapis.com/css?family=Alegreya+Sans:100,400&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+	<link href='//fonts.googleapis.com/css?family=Alegreya+Sans:100,300,400&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="screen.css">
 </head>
 <body>
