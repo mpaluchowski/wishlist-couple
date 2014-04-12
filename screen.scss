@@ -120,7 +120,7 @@ main {
 
 		article {
 			position: relative;
-			min-height: 100px;
+			min-height: calc(3rem + 12px + 100px);
 
 			> *:not(img) {
 				margin-left: 115px;
@@ -135,7 +135,7 @@ main {
 				height: 100px;
 				left: 0;
 				position: absolute;
-				top: 0;
+				top: calc(3rem + 8px);
 				width: 100px;
 			}
 
