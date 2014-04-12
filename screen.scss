@@ -99,13 +99,20 @@ main {
 
 	> ul > li {
 		background: #FFF;
-		border-radius: 5px;
 		box-sizing: border-box;
 		display: inline-block;
 		margin: 20px 0;
 		padding: 15px;
 		vertical-align: top;
 		width: calc(50% - 10px);
+
+		background:
+			linear-gradient(45deg,  #FFF 10px, #FFF 10px) bottom left,
+			linear-gradient(135deg, transparent 10px, #FFF 10px) top left,
+			linear-gradient(225deg, #FFF 10px, #FFF 10px) top right,
+			linear-gradient(315deg, transparent 10px, #FFF 10px) bottom right;
+		background-size: 50% 50%;
+		background-repeat: no-repeat;
 
 		&:nth-child(even) {
 			margin-left: 20px;
@@ -125,7 +132,6 @@ main {
 			}
 
 			img {
-				border-radius: 5px;
 				height: 100px;
 				left: 0;
 				position: absolute;
@@ -141,12 +147,19 @@ main {
 				font-size: 1.5rem;
 				font-family: Tahoma, Verdana, sans-serif;
 				line-height: 150%;
+				margin-left: 5px;
+				padding-left: 15px;
+				position: relative;
 
 				&:before {
-					content: " ";
-					background: #000;
-					width: 1.5rem;
-					height: 1.5rem;
+					content: "";
+					display: block;
+					background: #CCC;
+					position: absolute;
+					left: 0;
+					top: .8rem;
+					width: .8rem;
+					height: .8rem;
 					border-radius: 15%;
 				}
 			}
