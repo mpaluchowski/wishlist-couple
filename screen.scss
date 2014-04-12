@@ -68,6 +68,18 @@ header {
 					right: -35px;
 					top: 0;
 					width: 0;
+					z-index: 80;
+				}
+			}
+
+			&:last-child {
+				&:before {
+					content: "&";
+					display: block;
+					left: -25px;
+					position: absolute;
+					width: 50px;
+					text-align: center;
 					z-index: 100;
 				}
 			}

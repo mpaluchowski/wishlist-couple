@@ -15,7 +15,7 @@ include("./list.inc.php");
 <body>
 
 <header>
-	<h1>M&amp;M Wishlist</h1>
+	<h1>Wishlist</h1>
 
 	<nav>
 		<ul>
