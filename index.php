@@ -28,8 +28,7 @@ include("./list.inc.php");
 
 <?php foreach ($wishlists as $wishlist => $items): ?>
 	<ul id="wishlist-<?php echo $wishlist ?>">
-<?php foreach ($items as $item): ?>
-		<li><article>
+<?php foreach ($items as $item): ?><li><article>
 			<img src="<?php echo $item['image'] ?>" alt="<?php echo $item['name'] ?>">
 			<h2><?php echo $item['name'] ?></h2>
 			
@@ -40,8 +39,7 @@ include("./list.inc.php");
 			</ul>
 
 			<a href="<?php echo $item['link'] ?>">Check It Out</a>
-		</article></li>
-<?php endforeach; // foreach ($items as $item) ?>
+		</article></li><?php endforeach; // foreach ($items as $item) ?>
 	</ul>
 <?php endforeach; // foreach ($wishlists as $wishlist => $items) ?>
 

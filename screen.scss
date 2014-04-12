@@ -99,11 +99,16 @@ main {
 
 	> ul > li {
 		background: #FFF;
-		border-radius: 10px;
+		border-radius: 5px;
+		box-sizing: border-box;
+		display: inline-block;
+		margin: 20px 0;
 		padding: 15px;
+		vertical-align: top;
+		width: calc(50% - 10px);
 
-		+ li {
-			margin: 20px 0;
+		&:nth-child(even) {
+			margin-left: 20px;
 		}
 
 		article {
@@ -120,7 +125,7 @@ main {
 			}
 
 			img {
-				border-radius: 10px;
+				border-radius: 5px;
 				height: 100px;
 				left: 0;
 				position: absolute;
@@ -142,7 +147,7 @@ main {
 					background: #000;
 					width: 1.5rem;
 					height: 1.5rem;
-					border-radius: 50%;
+					border-radius: 15%;
 				}
 			}
 
