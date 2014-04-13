@@ -13,6 +13,7 @@ header {
 
 	h1 {
 		bottom: 70px;
+		cursor: pointer;
 		text-shadow: 1px 1px 1px #000;
 		color: #FFF;
 		text-align: center;
@@ -20,6 +21,10 @@ header {
 		font-size: 8rem;
 		position: absolute;
 		width: 100%;
+
+		&:hover {
+			color: $background-global;
+		}
 	}
 
 	nav {
