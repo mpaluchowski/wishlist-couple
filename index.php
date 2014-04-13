@@ -19,7 +19,7 @@ include("./list.inc.php");
 
 	<nav>
 		<ul>
-			<li>Milena</li><li>Michał</li>
+			<li>Milena</li><li class="selected">Michał</li>
 		</ul>
 	</nav>
 </header>
