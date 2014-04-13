@@ -4,7 +4,7 @@ include("./data/config.inc.php");
 
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="<?php echo $language ?>">
 <head>
 	<meta charset="utf-8">
 	<title><?php echo htmlspecialchars( $title ) ?></title>
