@@ -72,5 +72,9 @@ include("./data/config.inc.php");
 
 </main>
 
+<footer id="page-footer">
+	Made in Warsaw, by <a href="http://michal.paluchowski.com/about/">Michał Paluchowski</a>. <a href="https://github.com/mpaluchowski/wishlist-couple">Source code</a> is under a <a href="http://creativecommons.org/licenses/by/4.0/" rel="license">Creative Commons Attribution 4.0 International License</a>. Make something cool.
+</footer>
+
 </body>
 </html>
