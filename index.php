@@ -1,13 +1,13 @@
 <?php
 
-include("./list.inc.php");
+include("./data/config.inc.php");
 
 ?>
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>M&amp;M Wishlist</title>
+	<title><?php echo htmlspecialchars( $title ) ?></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href='//fonts.googleapis.com/css?family=Alegreya+Sans:100,300,400&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="screen.css">
@@ -19,7 +19,7 @@ include("./list.inc.php");
 
 	<nav>
 		<ul>
-			<li>Milena</li><li class="selected">Michał</li>
+			<li><?php echo $names[0]['name'] ?></li><li><?php echo $names[1]['name'] ?></li>
 		</ul>
 	</nav>
 </header>
