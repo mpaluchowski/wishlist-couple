@@ -42,7 +42,7 @@ include("./data/config.inc.php");
 		<cite><?php echo htmlspecialchars( $quote['cite'] ) ?></cite>
 	</blockquote>
 
-	<p><?php echo htmlspecialchars( $intro['text'] ) ?></p>
+	<p><?php echo $intro['text'] ?></p>
 	<p class="signature"><?php echo htmlspecialchars( $intro['signature'] ) ?></p>
 </section>
 
