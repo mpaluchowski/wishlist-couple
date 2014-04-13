@@ -168,7 +168,11 @@ main {
 				margin-top: 16px;
 
 				a {
-					border-radius: 3px;
+					border: {
+						width: 0 1px 1px 0;
+						radius: 3px;
+						style: solid;
+					}
 					color: #FFF;
 					display: inline-block;
 					font-size: 1.6rem;
@@ -183,10 +187,12 @@ main {
 
 					&.check-out {
 						background: #7b5;
+						border-color: darken(#7b5, 15%);
 					}
 
 					&.claim {
 						background: rgb(224, 70, 70);
+						border-color: darken(rgb(224, 70, 70), 15%);
 					}
 				}
 			}
