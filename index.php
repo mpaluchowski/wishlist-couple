@@ -9,8 +9,11 @@ include("./data/config.inc.php");
 	<meta charset="utf-8">
 	<title><?php echo htmlspecialchars( $title ) ?></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="noindex, nofollow, noarchive, noimageindex">
+
 	<link href='//fonts.googleapis.com/css?family=Alegreya+Sans:100,300,400&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="screen.css">
+
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
 	<script src="lib.js"></script>
 	<script type="text/javascript">
