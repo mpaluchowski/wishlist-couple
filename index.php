@@ -11,6 +11,13 @@ include("./data/config.inc.php");
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href='//fonts.googleapis.com/css?family=Alegreya+Sans:100,300,400&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="screen.css">
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+	<script src="lib.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			wishlist.Main.init();
+		});
+	</script>
 </head>
 <body>
 
@@ -18,8 +25,8 @@ include("./data/config.inc.php");
 	<h1>Wishlist</h1>
 
 	<nav>
-		<ul>
-			<li><?php echo $names[0]['name'] ?></li><li><?php echo $names[1]['name'] ?></li>
+		<ul id="wishlist-selection">
+			<li data-id="<?php echo $names[0]['id'] ?>"><?php echo $names[0]['name'] ?></li><li data-id="<?php echo $names[1]['id'] ?>"><?php echo $names[1]['name'] ?></li>
 		</ul>
 	</nav>
 </header>
