@@ -40,7 +40,9 @@ include("./list.inc.php");
 
 			<footer>
 				<a href="<?php echo $item['link'] ?>" class="check-out">Check It Out!</a>
+				<?php if (!isset($item['claimeable']) || $item['claimeable']): ?>
 				<a href="#" class="claim">Claim It!</a>
+				<?php endif; ?>
 			</footer>
 		</article></li><?php endforeach; // foreach ($items as $item) ?>
 	</ul>
