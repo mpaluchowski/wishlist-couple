@@ -1,6 +1,8 @@
 
 @import "variables";
 
+$background-global: #DBDBD2;
+
 @import "reset";
 
 header {
@@ -31,7 +33,7 @@ header {
 			position: relative;
 
 			&:before {
-				border-top: 72px solid #EEE;
+				border-top: 70px solid $background-global;
 				border-right: 70px solid transparent;
 				content: "";
 				height: 0;
@@ -73,11 +75,11 @@ header {
 				}
 
 				&:hover:after {
-					border-top-color: #DDD;
+					border-top-color: darken($background-global, 10%);
 				}
 
 				&.selected:after {
-					border-top-color: #EEE;
+					border-top-color: $background-global;
 				}
 			}
 
@@ -97,12 +99,12 @@ header {
 			}
 
 			&:hover {
-				background: #DDD;
+				background: darken($background-global, 10%);
 				cursor: pointer;
 			}
 
 			&.selected {
-				background: #EEE;
+				background: $background-global;
 			}
 		}
 	}
@@ -171,7 +173,7 @@ main {
 				&:before {
 					content: "";
 					display: block;
-					background: #CCC;
+					background: darken($background-global, 10%);
 					position: absolute;
 					left: 0;
 					top: .8rem;
