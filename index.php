@@ -26,8 +26,19 @@ include("./data/config.inc.php");
 
 <main>
 
+<section id="home" class="page">
+	<blockquote>
+		<?php echo htmlspecialchars( $quote['text'] ) ?>
+		<cite><?php echo htmlspecialchars( $quote['cite'] ) ?></cite>
+	</blockquote>
+
+	<p><?php echo htmlspecialchars( $intro['text'] ) ?></p>
+	<p class="signature"><?php echo htmlspecialchars( $intro['signature'] ) ?></p>
+</section>
+
 <?php foreach ($wishlists as $wishlist => $items): ?>
-	<ul id="wishlist-<?php echo $wishlist ?>">
+<section id="wishlist-<?php echo $wishlist ?>" class="wishlist">
+	<ul>
 <?php foreach ($items as $item): ?><li><article>
 			<img src="<?php echo $item['image'] ?>" alt="<?php echo $item['name'] ?>">
 			<h2><?php echo $item['name'] ?></h2>
@@ -46,6 +57,7 @@ include("./data/config.inc.php");
 			</footer>
 		</article></li><?php endforeach; // foreach ($items as $item) ?>
 	</ul>
+</section>
 <?php endforeach; // foreach ($wishlists as $wishlist => $items) ?>
 
 </main>

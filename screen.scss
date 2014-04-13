@@ -117,103 +117,149 @@ main {
 	max-width: 960px;
 	padding: 20px;
 
-	> ul > li {
-		background: #FFF;
-		-moz-box-sizing: border-box;
-		box-sizing: border-box;
-		display: inline-block;
-		margin: 10px 0;
-		padding: 15px;
-		vertical-align: top;
-		width: calc(50% - 10px);
+	section {
 
-		background:
-			linear-gradient(45deg,  #FFF 10px, #FFF 10px) bottom left,
-			linear-gradient(135deg, transparent 10px, #FFF 10px) top left,
-			linear-gradient(225deg, #FFF 10px, #FFF 10px) top right,
-			linear-gradient(315deg, transparent 10px, #FFF 10px) bottom right;
-		background-size: 51% 51%;
-		background-repeat: no-repeat;
+		&.page {
+			background: #FFF;
+			background:
+				linear-gradient(45deg,  #FFF 10px, #FFF 10px) bottom left,
+				linear-gradient(135deg, transparent 10px, #FFF 10px) top left,
+				linear-gradient(225deg, #FFF 10px, #FFF 10px) top right,
+				linear-gradient(315deg, transparent 10px, #FFF 10px) bottom right;
+			background-size: 51% 51%;
+			background-repeat: no-repeat;
+			padding: 15px;
 
-		&:nth-child(even) {
-			margin-left: 20px;
-		}
-
-		article {
-			position: relative;
-			min-height: calc(3rem + 12px + 100px);
-
-			> *:not(img) {
-				margin-left: 115px;
-			}
-
-			h2 {
-				font-size: 3rem;
-				font-weight: 300;
-			}
-
-			img {
-				height: 100px;
-				left: 0;
-				position: absolute;
-				top: calc(3rem + 12px);
-				width: 100px;
-			}
-
-			ul {
-				margin-top: 12px;
-			}
-
-			li {
+			p {
 				font-size: 1.5rem;
 				font-family: "Lucida Grande", "Lucida Sans Unicode", sans-serif;
 				line-height: 150%;
-				margin-left: 5px;
-				padding-left: 15px;
-				position: relative;
 
-				&:before {
-					content: "";
-					display: block;
-					background: darken($background-global, 10%);
-					position: absolute;
-					left: 0;
-					top: .8rem;
-					width: .8rem;
-					height: .8rem;
-					border-radius: 15%;
+				&.signature {
+					font: {
+						family: inherit;
+						size: 4rem;
+						weight: 100;
+					}
+					margin: 20px 0 0 20px;
 				}
 			}
 
-			footer {
-				margin-top: 24px;
+			blockquote {
+				font-size: 3rem;
+				font-weight: 100;
+				text-align: center;
+				margin: 15px 30px 30px;
 
-				a {
-					border: {
-						width: 0 1px 1px 0;
-						radius: 3px;
-						style: solid;
+				cite {
+					&:before {
+						content: "\2014  ";
 					}
-					color: #FFF;
-					display: inline-block;
-					font-size: 1.6rem;
-					font-family: Helvetica, Arial, sans-serif;
-					padding: .6rem 1rem;
-					text-decoration: none;
-					text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+				}
+			}
+		}
 
-					& + a {
-						margin-left: 15px;
+		&.wishlist {
+
+			> ul > li {
+				background: #FFF;
+				-moz-box-sizing: border-box;
+				box-sizing: border-box;
+				display: inline-block;
+				margin: 10px 0;
+				padding: 15px;
+				vertical-align: top;
+				width: calc(50% - 10px);
+
+				background:
+					linear-gradient(45deg,  #FFF 10px, #FFF 10px) bottom left,
+					linear-gradient(135deg, transparent 10px, #FFF 10px) top left,
+					linear-gradient(225deg, #FFF 10px, #FFF 10px) top right,
+					linear-gradient(315deg, transparent 10px, #FFF 10px) bottom right;
+				background-size: 51% 51%;
+				background-repeat: no-repeat;
+
+				&:nth-child(even) {
+					margin-left: 20px;
+				}
+
+				article {
+					position: relative;
+					min-height: calc(3rem + 12px + 100px);
+
+					> *:not(img) {
+						margin-left: 115px;
 					}
 
-					&.check-out {
-						background: #7b5;
-						border-color: darken(#7b5, 15%);
+					h2 {
+						font-size: 3rem;
+						font-weight: 300;
 					}
 
-					&.claim {
-						background: rgb(224, 70, 70);
-						border-color: darken(rgb(224, 70, 70), 15%);
+					img {
+						height: 100px;
+						left: 0;
+						position: absolute;
+						top: calc(3rem + 12px);
+						width: 100px;
+					}
+
+					ul {
+						margin-top: 12px;
+					}
+
+					li {
+						font-size: 1.5rem;
+						font-family: "Lucida Grande", "Lucida Sans Unicode", sans-serif;
+						line-height: 150%;
+						margin-left: 5px;
+						padding-left: 15px;
+						position: relative;
+
+						&:before {
+							content: "";
+							display: block;
+							background: darken($background-global, 10%);
+							position: absolute;
+							left: 0;
+							top: .8rem;
+							width: .8rem;
+							height: .8rem;
+							border-radius: 15%;
+						}
+					}
+
+					footer {
+						margin-top: 24px;
+
+						a {
+							border: {
+								width: 0 1px 1px 0;
+								radius: 3px;
+								style: solid;
+							}
+							color: #FFF;
+							display: inline-block;
+							font-size: 1.6rem;
+							font-family: Helvetica, Arial, sans-serif;
+							padding: .6rem 1rem;
+							text-decoration: none;
+							text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+
+							& + a {
+								margin-left: 15px;
+							}
+
+							&.check-out {
+								background: #7b5;
+								border-color: darken(#7b5, 15%);
+							}
+
+							&.claim {
+								background: rgb(224, 70, 70);
+								border-color: darken(rgb(224, 70, 70), 15%);
+							}
+						}
 					}
 				}
 			}
