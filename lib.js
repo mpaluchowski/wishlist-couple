@@ -15,8 +15,8 @@ wishlist.Main = function() {
 			return;
 		}
 
-		$( '.wishlist' ).hide();
-		$( '#home ' ).hide();
+		_hideSections( true, true );
+
 		$( window.location.hash ).show();
 
 		var wishlistId = window.location.hash.replace(
@@ -29,7 +29,8 @@ wishlist.Main = function() {
 	}
 
 	homepageDisplay = function( event ) {
-		$( '.wishlist' ).hide();
+		_hideSections( false, true );
+
 		$( '#wishlist-selection li' ).removeClass( 'selected' );
 		$( '#home ' ).show();
 
@@ -37,15 +38,22 @@ wishlist.Main = function() {
 	},
 
 	toggleWishlistDisplay = function( event ) {
-		$( '#home' ).hide();
-		
-		$( '.wishlist' ).hide();
+		_hideSections( true, true );
+
 		$( '#wishlist-' + $(this).attr('data-id') ).show();
 		
 		$( '#wishlist-selection li' ).removeClass( 'selected' );
 		$( this ).addClass( 'selected' );
 
 		history.pushState( {}, "", '#wishlist-' + $(this).attr('data-id') );
+	},
+
+	_hideSections = function( home, wishlists ) {
+		if ( home )
+			$( '#home ' ).hide();
+
+		if ( wishlists )
+			$( '.wishlist' ).hide();
 	}
 
 	return {
