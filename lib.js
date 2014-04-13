@@ -23,15 +23,15 @@ wishlist.Main = function() {
 			/^#wishlist\-(.*)$/g, "$1"
 			);
 		if ( '' !== wishlistId ) {
-			$( '#wishlist-selection li' ).removeClass( 'selected' );
-			$( 'li[data-id=' + wishlistId + ']', '#wishlist-selection' ).addClass( 'selected' );
+			_resetNavSelectionState(
+				$( 'li[data-id=' + wishlistId + ']', '#wishlist-selection' )
+				);
 		}
 	}
 
 	homepageDisplay = function( event ) {
 		_hideSections( false, true );
-
-		$( '#wishlist-selection li' ).removeClass( 'selected' );
+		_resetNavSelectionState();
 		$( '#home ' ).show();
 
 		history.replaceState( {}, "", '/' );
@@ -39,11 +39,8 @@ wishlist.Main = function() {
 
 	toggleWishlistDisplay = function( event ) {
 		_hideSections( true, true );
-
 		$( '#wishlist-' + $(this).attr('data-id') ).show();
-		
-		$( '#wishlist-selection li' ).removeClass( 'selected' );
-		$( this ).addClass( 'selected' );
+		_resetNavSelectionState( this );
 
 		history.pushState( {}, "", '#wishlist-' + $(this).attr('data-id') );
 	},
@@ -54,6 +51,13 @@ wishlist.Main = function() {
 
 		if ( wishlists )
 			$( '.wishlist' ).hide();
+	},
+
+	_resetNavSelectionState = function( selectedItem ) {
+		$( '#wishlist-selection li' ).removeClass( 'selected' );
+
+		if ( undefined !== selectedItem )
+			$( selectedItem ).addClass( 'selected' );
 	}
 
 	return {
