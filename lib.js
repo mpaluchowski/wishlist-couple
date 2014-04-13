@@ -7,6 +7,8 @@ wishlist.Main = function() {
 		$( '#wishlist-selection li' ).click( toggleWishlistDisplay )
 
 		loadInitialPage();
+
+		initMenuFixing();
 	},
 
 	loadInitialPage = function() {
@@ -26,8 +28,26 @@ wishlist.Main = function() {
 			_resetNavSelectionState(
 				$( 'li[data-id=' + wishlistId + ']', '#wishlist-selection' )
 				);
+			$( 'html, body' ).animate({
+					scrollTop: $( '#wishlist-selection' ).offset().top
+				});
 		}
 	}
+
+	initMenuFixing = function() {
+		var menu = $('#wishlist-selection');
+		var menuPosition = $( menu ).offset().top;
+
+		$( window ).scroll( function() {
+			if ( $( window ).scrollTop() >= menuPosition ) {
+				if ( !menu.hasClass( 'fixed' ) )
+					menu.addClass( 'fixed' );
+			} else {
+				if ( menu.hasClass( 'fixed' ) )
+					menu.removeClass( 'fixed' );
+			}
+		});
+	},
 
 	homepageDisplay = function( event ) {
 		_hideSections( false, true );
