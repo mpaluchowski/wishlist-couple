@@ -73,7 +73,7 @@ $config = new \lib\Configuration();
 				<a href="<?php echo $item['link'] ?>" class="check-out">Check It Out!</a>
 				<?php endif; ?>
 				<?php if (!isset($item['claimeable']) || $item['claimeable']): ?>
-				<a href="#" class="claim" data-tooltip="Claiming will remove it from the list, so that nobody else can choose it.">Claim It!</a>
+				<a href="/actions.php?action=claim&amp;id=<?php echo $item['id'] ?>" class="claim" data-tooltip="Claiming will remove it from the list, so that nobody else can choose it.">Claim It!</a>
 				<?php endif; ?>
 			</footer>
 		</article></li><?php endif; endforeach; // foreach ($items as $item) ?>
