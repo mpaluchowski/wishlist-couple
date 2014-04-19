@@ -44,6 +44,6 @@ $wishlists[ 'secondlist' ] = [
 			'For long evenings',
 			'About love and peace'
 		],
-		'claimeable' => false
+		'claimable' => false
 	]
 ];

@@ -72,7 +72,7 @@ $config = new \lib\Configuration();
 				<?php if ( null !== $item['link'] ): ?>
 				<a href="<?php echo $item['link'] ?>" class="check-out">Check It Out!</a>
 				<?php endif; ?>
-				<?php if ( !isset($item['claimeable'] ) || $item['claimeable']): ?>
+				<?php if ( !isset($item['claimable'] ) || $item['claimable']): ?>
 				<a href="/actions.php?action=claim&amp;id=<?php echo $item['id'] ?>" class="claim" data-tooltip="Claiming will remove it from the list, so that nobody else can choose it.">Claim It!</a>
 				<?php endif; ?>
 			</footer>
