@@ -1,1 +1,49 @@
 <?php
+
+$language = "en";
+
+$title = 'My Wishlist';
+
+$quote = [
+	'text' => "We're one, but we're not the same.",
+	'cite' => "One, U2"
+];
+
+$intro = [
+	'text' => ["Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris congue felis sed iaculis viverra. Nullam non orci arcu. Morbi convallis placerat consectetur."],
+	'signature' => "You & Me"
+];
+
+$names = [
+	[
+		'id' => 'firstlist',
+		'name' => 'Firstname'
+	],[
+		'id' => 'secondlist',
+		'name' => 'Secondname'
+	]
+];
+
+$wishlists[ 'firstlist' ] = [
+	[
+		'name' => 'Love!',
+		'link' => '#',
+		'image' => 'http://lorempixel.com/200/200/',
+		'features' => [
+			'lots of it!'
+		]
+	]
+];
+
+$wishlists[ 'secondlist' ] = [
+	[
+		'name' => 'Books',
+		'link' => '#',
+		'image' => 'http://lorempixel.com/200/200/',
+		'features' => [
+			'For long evenings',
+			'About love and peace'
+		],
+		'claimeable' => false
+	]
+];
