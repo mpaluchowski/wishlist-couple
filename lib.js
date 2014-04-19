@@ -3,9 +3,6 @@ var wishlist = wishlist || {};
 wishlist.Main = function() {
 
 	var init = function() {
-		$( 'h1' ).click( homepageDisplay );
-		$( '#wishlist-selection li' ).click( toggleWishlistDisplay )
-
 		loadInitialPage();
 
 		initActionTriggers();
@@ -36,6 +33,8 @@ wishlist.Main = function() {
 	},
 
 	initActionTriggers = function() {
+		$( 'h1' ).click( homepageDisplay );
+		$( '#wishlist-selection li' ).click( toggleWishlistDisplay )
 		$('.wishlist .claim').click( triggerClaimItem );
 	}
 
