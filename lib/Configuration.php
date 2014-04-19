@@ -23,10 +23,13 @@ class Configuration {
 
 		$this->data['wishlists'] = $wishlists;
 
+		$claimManager = new ClaimManager();
 		foreach ($this->data['wishlists'] as $wishlist => $items) {
 			foreach ($items as $key => $item) {
 				$this->data['wishlists'][$wishlist][$key]['id'] =
 						md5($wishlist . $item['name']);
+				$this->data['wishlists'][$wishlist][$key]['claimed'] =
+						$claimManager->isClaimed($this->data['wishlists'][$wishlist][$key]['id']);
 			}
 		}
 	}

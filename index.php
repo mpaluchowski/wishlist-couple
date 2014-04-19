@@ -58,7 +58,7 @@ $config = new \lib\Configuration();
 <?php foreach ($config->getWishlists() as $wishlist => $items): ?>
 <section id="wishlist-<?php echo $wishlist ?>" class="wishlist">
 	<ul>
-<?php foreach ($items as $item): ?><li id="item-<?php echo $item['id'] ?>"><article>
+<?php foreach ($items as $item): if (!$item['claimed']): ?><li id="item-<?php echo $item['id'] ?>"><article>
 			<img src="<?php echo $item['image'] ?>" alt="<?php echo $item['name'] ?>">
 			<h2><?php echo $item['name'] ?></h2>
 
@@ -76,7 +76,7 @@ $config = new \lib\Configuration();
 				<a href="#" class="claim" data-tooltip="Claiming will remove it from the list, so that nobody else can choose it.">Claim It!</a>
 				<?php endif; ?>
 			</footer>
-		</article></li><?php endforeach; // foreach ($items as $item) ?>
+		</article></li><?php endif; endforeach; // foreach ($items as $item) ?>
 	</ul>
 </section>
 <?php endforeach; // foreach ($wishlists as $wishlist => $items) ?>
