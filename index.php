@@ -55,15 +55,15 @@ $config = new \lib\Configuration();
 	<p class="signature"><?php echo htmlspecialchars( $config->getIntro()['signature'] ) ?></p>
 </section>
 
-<?php foreach ($config->getWishlists() as $wishlist => $items): ?>
+<?php foreach ( $config->getWishlists() as $wishlist => $items ): ?>
 <section id="wishlist-<?php echo $wishlist ?>" class="wishlist">
 	<ul>
-<?php foreach ($items as $item): if (!$item['claimed']): ?><li><article id="item-<?php echo $item['id'] ?>">
+<?php foreach ( $items as $item ): if ( !$item['claimed'] ): ?><li><article id="item-<?php echo $item['id'] ?>">
 			<img src="<?php echo $item['image'] ?>" alt="<?php echo $item['name'] ?>">
 			<h2><?php echo $item['name'] ?></h2>
 
 			<ul>
-			<?php foreach ($item['features'] as $feature): ?>
+			<?php foreach ( $item['features'] as $feature ): ?>
 				<li><?php echo $feature ?></li>
 			<?php endforeach; // foreach ($item['features'] as $feature) ?>
 			</ul>
@@ -72,7 +72,7 @@ $config = new \lib\Configuration();
 				<?php if ( null !== $item['link'] ): ?>
 				<a href="<?php echo $item['link'] ?>" class="check-out">Check It Out!</a>
 				<?php endif; ?>
-				<?php if (!isset($item['claimeable']) || $item['claimeable']): ?>
+				<?php if ( !isset($item['claimeable'] ) || $item['claimeable']): ?>
 				<a href="/actions.php?action=claim&amp;id=<?php echo $item['id'] ?>" class="claim" data-tooltip="Claiming will remove it from the list, so that nobody else can choose it.">Claim It!</a>
 				<?php endif; ?>
 			</footer>
