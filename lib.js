@@ -8,6 +8,7 @@ wishlist.Main = function() {
 
 		loadInitialPage();
 
+		initActionTriggers();
 		initMenuFixing();
 	},
 
@@ -32,6 +33,10 @@ wishlist.Main = function() {
 					scrollTop: $( '#wishlist-selection' ).offset().top
 				});
 		}
+	},
+
+	initActionTriggers = function() {
+		$('.wishlist .claim').click(triggerClaimItem);
 	}
 
 	initMenuFixing = function() {
@@ -47,6 +52,27 @@ wishlist.Main = function() {
 					menu.removeClass( 'fixed' );
 			}
 		});
+	},
+
+	triggerClaimItem = function( event ) {
+		event.preventDefault();
+
+		var parentContainer = $(event.target).closest('article');
+
+		$.post(
+			"/actions.php",
+			{
+				'action': 'claim',
+				'id': parentContainer.attr('id').replace(/item\-/g, '')
+			},
+			function() {
+				$(parentContainer).closest('li').fadeOut(
+					400,
+					function() {
+						$(this).remove();
+					})
+			}
+			);
 	},
 
 	homepageDisplay = function( event ) {
