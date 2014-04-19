@@ -1,19 +1,27 @@
 <?php
 
+/* Language this page is in */
 $language = "en";
 
+/* Title that will show in the browser's title bar*/
 $title = 'My Wishlist';
 
+/* A quote that'll appear before the introduction */
 $quote = [
 	'text' => "We're one, but we're not the same.",
 	'cite' => "One, U2"
 ];
 
+/* Introduction text, can have multiple paragraphs. Signature. */
 $intro = [
 	'text' => ["Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris congue felis sed iaculis viverra. Nullam non orci arcu. Morbi convallis placerat consectetur."],
 	'signature' => "You & Me"
 ];
 
+/*
+Names of the two persons in the couple.
+IDs must match those in the $wishlists array.
+*/
 $names = [
 	[
 		'id' => 'firstlist',
@@ -24,6 +32,14 @@ $names = [
 	]
 ];
 
+/*
+First wishlist
+- name of the item
+- link (optional) to a page with broader description, or shop
+- image of the item, at least 200x200px
+- features, characteristics of the desired item
+- claimable (optional) whether item can be claimed and removed from list
+*/
 $wishlists[ 'firstlist' ] = [
 	[
 		'name' => 'Love!',
@@ -35,6 +51,7 @@ $wishlists[ 'firstlist' ] = [
 	]
 ];
 
+/* Second wishlist */
 $wishlists[ 'secondlist' ] = [
 	[
 		'name' => 'Books',
