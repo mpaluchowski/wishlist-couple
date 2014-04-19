@@ -60,7 +60,9 @@ include("./data/config.inc.php");
 			</ul>
 
 			<footer>
+				<?php if ( null !== $item['link'] ): ?>
 				<a href="<?php echo $item['link'] ?>" class="check-out">Check It Out!</a>
+				<?php endif; ?>
 				<?php if (!isset($item['claimeable']) || $item['claimeable']): ?>
 				<a href="#" class="claim">Claim It!</a>
 				<?php endif; ?>
