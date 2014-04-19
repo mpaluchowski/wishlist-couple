@@ -327,11 +327,33 @@ main {
 							font-size: 1.6rem;
 							font-family: Helvetica, Arial, sans-serif;
 							padding: .6rem 1rem;
+							position: relative;
 							text-decoration: none;
 							text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
 
 							& + a {
 								margin-left: 15px;
+							}
+
+							&:hover {
+								&:after {
+									background: rgba(0, 0, 0, 0.8);
+									border-radius: 5px;
+									bottom: calc(100% + 5px);
+									box-sizing: border-box;
+									-moz-box-sizing: border-box;
+									content: attr(data-tooltip);
+									font-size: 1.2rem;
+									left: 50%;
+									line-height: 150%;
+									padding: 7px;
+									position: absolute;
+									margin-left: -110px;
+									text-align: center;
+									vertical-align: bottom;
+									width: 220px;
+									z-index: 25;
+								}
 							}
 
 							&.check-out {
