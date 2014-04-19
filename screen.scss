@@ -184,6 +184,10 @@ main {
 				font-family: "Lucida Grande", "Lucida Sans Unicode", sans-serif;
 				line-height: 150%;
 
+				+ p {
+					margin-top: 15px;
+				}
+
 				&.signature {
 					font: {
 						family: inherit;

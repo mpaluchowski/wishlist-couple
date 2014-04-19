@@ -42,7 +42,13 @@ include("./data/config.inc.php");
 		<cite><?php echo htmlspecialchars( $quote['cite'] ) ?></cite>
 	</blockquote>
 
+	<?php if ( is_array( $intro['text'] ) ):
+		  foreach ( $intro['text'] as $paragraph ): ?>
+	<p><?php echo $paragraph ?></p>
+	<?php endforeach;
+		  else: ?>
 	<p><?php echo $intro['text'] ?></p>
+	<?php endif; ?>
 	<p class="signature"><?php echo htmlspecialchars( $intro['signature'] ) ?></p>
 </section>
 
