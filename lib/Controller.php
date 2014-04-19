@@ -11,7 +11,7 @@ class Controller {
 		if (method_exists($this, $actionFunction))
 			$this->$actionFunction($_REQUEST);
 
-		if (!$this->isAjax) {
+		if (!$this->isAjax()) {
 			header("Location: /");
 		}
 	}
