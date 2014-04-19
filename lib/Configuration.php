@@ -5,13 +5,13 @@ class Configuration {
 
 	private $data = [];
 
-	public function __construct($file = 'data\config.inc.php') {
+	public function __construct($file = 'data/config.inc.php') {
 		$this->load($file);
 	}
 
 	public function load($file) {
 		if (!is_file($file)) {
-			die('You need to create the file config.inc.php in the \data\ folder.');
+			die('You need to create the file config.inc.php in the /data/ folder.');
 		}
 		include_once($file);
 
