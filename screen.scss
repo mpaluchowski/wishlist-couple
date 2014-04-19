@@ -329,11 +329,19 @@ main {
 							&.check-out {
 								background: #7b5;
 								border-color: darken(#7b5, 15%);
+
+								&:hover {
+									background: lighten(#7b5, 8%);
+								}
 							}
 
 							&.claim {
 								background: rgb(224, 70, 70);
 								border-color: darken(rgb(224, 70, 70), 15%);
+
+								&:hover {
+									background: lighten(rgb(224, 70, 70), 8%);
+								}
 							}
 						}
 					}
