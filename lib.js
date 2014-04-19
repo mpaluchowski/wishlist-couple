@@ -36,7 +36,7 @@ wishlist.Main = function() {
 	},
 
 	initActionTriggers = function() {
-		$('.wishlist .claim').click(triggerClaimItem);
+		$('.wishlist .claim').click( triggerClaimItem );
 	}
 
 	initMenuFixing = function() {
@@ -57,19 +57,19 @@ wishlist.Main = function() {
 	triggerClaimItem = function( event ) {
 		event.preventDefault();
 
-		var parentContainer = $(event.target).closest('article');
+		var parentContainer = $( event.target ).closest( 'article' );
 
 		$.post(
 			"/actions.php",
 			{
 				'action': 'claim',
-				'id': parentContainer.attr('id').replace(/item\-/g, '')
+				'id': parentContainer.attr( 'id' ).replace( /item\-/g, '' )
 			},
 			function() {
-				$(parentContainer).closest('li').fadeOut(
+				$( parentContainer ).closest( 'li' ).fadeOut(
 					400,
 					function() {
-						$(this).remove();
+						$( this ).remove();
 					})
 			}
 			);
