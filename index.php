@@ -52,7 +52,7 @@ include("./data/config.inc.php");
 <?php foreach ($items as $item): ?><li><article>
 			<img src="<?php echo $item['image'] ?>" alt="<?php echo $item['name'] ?>">
 			<h2><?php echo $item['name'] ?></h2>
-			
+
 			<ul>
 			<?php foreach ($item['features'] as $feature): ?>
 				<li><?php echo $feature ?></li>
