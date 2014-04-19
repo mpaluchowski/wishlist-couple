@@ -335,27 +335,6 @@ main {
 								margin-left: 15px;
 							}
 
-							&:hover {
-								&:after {
-									background: rgba(0, 0, 0, 0.8);
-									border-radius: 5px;
-									bottom: calc(100% + 5px);
-									box-sizing: border-box;
-									-moz-box-sizing: border-box;
-									content: attr(data-tooltip);
-									font-size: 1.2rem;
-									left: 50%;
-									line-height: 150%;
-									padding: 7px;
-									position: absolute;
-									margin-left: -110px;
-									text-align: center;
-									vertical-align: bottom;
-									width: 220px;
-									z-index: 25;
-								}
-							}
-
 							&.check-out {
 								background: #7b5;
 								border-color: darken(#7b5, 15%);
@@ -371,6 +350,25 @@ main {
 
 								&:hover {
 									background: lighten(rgb(224, 70, 70), 8%);
+
+									&:after {
+										background: rgba(0, 0, 0, 0.8);
+										border-radius: 5px;
+										bottom: calc(100% + 5px);
+										box-sizing: border-box;
+										-moz-box-sizing: border-box;
+										content: attr(data-tooltip);
+										font-size: 1.2rem;
+										left: 50%;
+										line-height: 150%;
+										padding: 7px;
+										position: absolute;
+										margin-left: -110px;
+										text-align: center;
+										vertical-align: bottom;
+										width: 220px;
+										z-index: 25;
+									}
 								}
 							}
 						}
