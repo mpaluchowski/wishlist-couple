@@ -16,10 +16,11 @@ A one-page wishlist meant for couples, with separate sections for each person (w
 
 ## Installation
 
-1. copy the `data\config.inc.php.dist` to `data\config.inc.php` and fill in all the values to your liking
-2. save header image as `data\header.jpg`
-3. compile SCSS files with SASS
-4. upload to web server
+1. Copy the `data\config.inc.php.dist` to `data\config.inc.php` and fill in all the values to your liking.
+2. Save header image as `data\header.jpg`.
+3. Compile `screen.scss` with SASS.
+4. Upload to web server.
+5. Make sure the `\data\` directory is writable by the server.
 
 ## License
 
