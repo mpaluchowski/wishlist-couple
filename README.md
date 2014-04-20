@@ -10,7 +10,7 @@ A one-page wishlist meant for couples, with separate sections for each person (w
 
 ## Requirements
 
-* PHP (any version 5+)
+* PHP 5.3 or greater
 * [SASS](http://sass-lang.com/) to compile the SCSS files
 * modern browsers - uses HTML5 and CSS3 extensively, latest Chrome, Firefox and Internet Explorer 10+ should be fine
 
