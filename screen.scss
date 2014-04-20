@@ -223,7 +223,14 @@ main {
 				linear-gradient(315deg, transparent 10px, #FFF 10px) bottom right;
 			background-size: 51% 51%;
 			background-repeat: no-repeat;
-			padding: 25px 50px;
+
+			@media #{$responsive-phone} {
+				padding: 15px 25px;
+			}
+
+			@media #{$responsive-tablet-desktop} {
+				padding: 25px 50px;
+			}
 
 			p {
 				font-size: 1.5rem;
