@@ -279,12 +279,16 @@ main {
 				background: #FFF;
 				-moz-box-sizing: border-box;
 				box-sizing: border-box;
-				margin: 10px 0;
 				padding: 15px;
 				vertical-align: top;
 
+				@media #{$responsive-phone} {
+					margin: 0 0 10px 0;
+				}
+
 				@media #{$responsive-tablet-desktop} {
 					display: inline-block;
+					margin: 10px 0;
 					width: calc(50% - 10px);
 
 					&:nth-child(even) {
