@@ -3,6 +3,9 @@
 
 $background-global: #DBDBD2;
 
+$size-menu-phone: 50px;
+$size-menu-tablet-desktop: 70px;
+
 @import "reset";
 
 header {
@@ -12,7 +15,6 @@ header {
 	position: relative;
 
 	h1 {
-		bottom: 70px;
 		cursor: pointer;
 		text-shadow: 1px 1px 1px #000;
 		color: #FFF;
@@ -22,10 +24,12 @@ header {
 		width: 100%;
 
 		@media #{$responsive-phone} {
+			bottom: $size-menu-phone;
 			font-size: 6rem;
 		}
 
 		@media #{$responsive-tablet-desktop} {
+			bottom: $size-menu-tablet-desktop;
 			font-size: 8rem;
 		}
 
@@ -40,19 +44,17 @@ header {
 		width: 100%;
 
 		@media #{$responsive-phone} {
-			height: 50px;
+			height: $size-menu-phone;
 		}
 
 		@media #{$responsive-tablet-desktop} {
-			height: 70px;
+			height: $size-menu-tablet-desktop;
 		}
 
 		ul {
 			position: relative;
 
 			&:before {
-				border-top: 70px solid $background-global;
-				border-right: 70px solid transparent;
 				content: "";
 				height: 0;
 				position: absolute;
@@ -61,6 +63,16 @@ header {
 				top: 0;
 				width: 0;
 				z-index: 50;
+
+				@media #{$responsive-phone} {
+					border-top: $size-menu-phone solid $background-global;
+					border-right: $size-menu-phone solid transparent;
+				}
+
+				@media #{$responsive-tablet-desktop} {
+					border-top: $size-menu-tablet-desktop solid $background-global;
+					border-right: $size-menu-tablet-desktop solid transparent;
+				}
 			}
 
 			&.fixed {
@@ -79,34 +91,47 @@ header {
 			box-sizing: border-box;
 			display: inline-block;
 			font-weight: 100;
-			height: 70px;
 			padding: 10px 0;
 			position: relative;
 
 			@media #{$responsive-phone} {
 				font-size: 3rem;
+				height: $size-menu-phone;
 			}
 
 			@media #{$responsive-tablet-desktop} {
 				font-size: 5rem;
+				height: $size-menu-tablet-desktop;
 			}
 
 			&:first-child {
 				text-align: right;
 				width: calc(50% - 35px);
-				padding-right: 5px;
+
+				@media #{$responsive-tablet-desktop} {
+					padding-right: 5px;
+				}
 
 				&:after {
-					border-top: 70px solid #FFF;
-					border-right: 70px solid transparent;
 					content: "";
 					height: 0;
 					margin-left: -1px;
 					position: absolute;
-					right: -70px;
 					top: 0;
 					width: 0;
 					z-index: 80;
+
+					@media #{$responsive-phone} {
+						border-top: $size-menu-phone solid #FFF;
+						border-right: $size-menu-phone solid transparent;
+						right: -$size-menu-phone;
+					}
+
+					@media #{$responsive-tablet-desktop} {
+						border-top: $size-menu-tablet-desktop solid #FFF;
+						border-right: $size-menu-tablet-desktop solid transparent;
+						right: -$size-menu-tablet-desktop;
+					}
 				}
 
 				&:hover:after {
@@ -119,17 +144,31 @@ header {
 			}
 
 			&:last-child {
-				padding-left: 75px;
 				width: calc(50% + 35px);
+
+				@media #{$responsive-phone} {
+					padding-left: $size-menu-phone;
+				}
+
+				@media #{$responsive-tablet-desktop} {
+					padding-left: $size-menu-tablet-desktop + 5px;
+				}
 
 				&:before {
 					content: "&";
 					display: block;
-					left: 10px;
 					position: absolute;
 					width: 50px;
 					text-align: center;
 					z-index: 100;
+
+					@media #{$responsive-phone} {
+						left: 0;
+					}
+
+					@media #{$responsive-tablet-desktop} {
+						left: 10px;
+					}
 				}
 			}
 
