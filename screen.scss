@@ -338,8 +338,14 @@ main {
 							text-decoration: none;
 							text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
 
-							& + a {
-								margin-left: 15px;
+							@media #{$responsive-phone} {
+								margin-top: 10px;
+							}
+
+							@media #{$responsive-tablet-desktop} {
+								& + a {
+									margin-left: 15px;
+								}
 							}
 
 							&.check-out {
