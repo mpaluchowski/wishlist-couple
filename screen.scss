@@ -164,7 +164,14 @@ main {
 	box-sizing: border-box;
 	margin: 0 auto;
 	max-width: 960px;
-	padding: 20px;
+
+	@media #{$responsive-phone} {
+		padding: 10px;
+	}
+
+	@media #{$responsive-tablet-desktop} {
+		padding: 20px;
+	}
 
 	section {
 
