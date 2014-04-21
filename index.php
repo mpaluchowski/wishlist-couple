@@ -61,11 +61,13 @@ $config = new \lib\Configuration();
 			<img src="<?php echo $item['image'] ?>" alt="<?php echo $item['name'] ?>">
 			<h2><?php echo $item['name'] ?></h2>
 
+			<?php if ( isset( $item['features'] ) ): ?>
 			<ul>
 			<?php foreach ( $item['features'] as $feature ): ?>
 				<li><?php echo $feature ?></li>
 			<?php endforeach; // foreach ($item['features'] as $feature) ?>
 			</ul>
+			<?php endif; ?>
 
 			<footer>
 				<?php if ( null !== $item['link'] ): ?>
