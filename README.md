@@ -4,9 +4,10 @@ A one-page wishlist meant for couples, with separate sections for each person (w
 
 ## Features
 
-* configurable - title, names, introduction, wishlist items with photos, characteristics and links to shops or more details
-* space for a large header image - usually the couple's photo; use 1500x500px for size
-* wishlist items can be claimed, thus disappearing from the list
+* configurable - title, names, introduction, wishlist items with photos, details and links to shops or more details
+* wishlist items can be claimed, disappearing from the list
+* visual customization via a large header image - usually the couple's photo; use 1500x500px for size
+* responsive layout
 
 ## Requirements
 
