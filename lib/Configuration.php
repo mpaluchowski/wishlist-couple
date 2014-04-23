@@ -16,6 +16,9 @@ class Configuration {
 		include_once($file);
 
 		$this->data['language'] = $language;
+		$this->data['analytics'] = isset( $analytics )
+				? $analytics
+				: null;
 		$this->data['title'] = $title;
 		$this->data['quote'] = $quote;
 		$this->data['intro'] = $intro;
@@ -36,6 +39,10 @@ class Configuration {
 
 	public function getLanguage() {
 		return $this->data['language'];
+	}
+
+	public function getAnalytics() {
+		return $this->data['analytics'];
 	}
 
 	public function getTitle() {

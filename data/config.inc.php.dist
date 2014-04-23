@@ -6,6 +6,12 @@ $language = "en";
 /* Title that will show in the browser's title bar*/
 $title = 'My Wishlist';
 
+/* Google Analytics property settings, optional */
+/* $analytics = [
+	'id' => 'UA-1234567-89',
+	'domain' => 'example.com'
+]; */
+
 /* A quote that'll appear before the introduction */
 $quote = [
 	'text' => "We're one, but we're not the same.",
