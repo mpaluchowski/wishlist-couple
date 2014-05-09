@@ -1,3 +1,6 @@
 *.css
 data/*
 !data/*.dist
+
+# SublimeText
+*.sublime-*
