@@ -93,6 +93,7 @@ header {
 			font-weight: 100;
 			padding: 10px 0;
 			position: relative;
+			transition: background 250ms ease-in-out;
 
 			@media #{$responsive-phone} {
 				font-size: 3rem;
@@ -120,6 +121,7 @@ header {
 					top: 0;
 					width: 0;
 					z-index: 80;
+					transition: border-top-color 250ms ease-in-out;
 
 					@media #{$responsive-phone} {
 						border-top: $size-menu-phone solid #FFF;
