@@ -284,19 +284,24 @@ main {
 		&.wishlist {
 			display: none;
 
+            > ul {
+                display: flex;
+                flex-flow: row wrap;
+            }
+
 			> ul > li {
 				background: #FFF;
 				-moz-box-sizing: border-box;
 				box-sizing: border-box;
 				padding: 15px;
 				vertical-align: top;
+                flex: 1 1 calc(50% - 10px);
 
 				@media #{$responsive-phone} {
 					margin: 0 0 10px 0;
 				}
 
 				@media #{$responsive-tablet-desktop} {
-					display: inline-block;
 					margin: 10px 0;
 					width: calc(50% - 10px);
 
