@@ -87,7 +87,6 @@ header {
 
 		li {
 			background: #FFF;
-			-moz-box-sizing: border-box;
 			box-sizing: border-box;
 			display: inline-block;
 			font-weight: 100;
@@ -201,7 +200,6 @@ header {
 }
 
 main {
-	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	margin: 0 auto;
 	max-width: 960px;
@@ -291,7 +289,6 @@ main {
 
 			> ul > li {
 				background: #FFF;
-				-moz-box-sizing: border-box;
 				box-sizing: border-box;
 				padding: 15px;
 				vertical-align: top;
@@ -432,7 +429,6 @@ main {
 										border-radius: 5px;
 										bottom: calc(100% + 5px);
 										box-sizing: border-box;
-										-moz-box-sizing: border-box;
 										content: attr(data-tooltip);
 										font-size: 1.2rem;
 										left: 50%;
