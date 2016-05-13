@@ -292,14 +292,15 @@ main {
 				box-sizing: border-box;
 				padding: 15px;
 				vertical-align: top;
-                flex: 1 1 calc(50% - 10px);
 
-				@media #{$responsive-phone} {
-					margin: 0 0 10px 0;
-				}
+                @media #{$responsive-phone} {
+                    flex: 1 1 100%;
+                    margin: 0 0 10px 0;
+                }
 
-				@media #{$responsive-tablet-desktop} {
-					margin: 10px 0;
+                @media #{$responsive-tablet-desktop} {
+                    flex: 1 1 calc(50% - 10px);
+                    margin: 10px 0;
 					width: calc(50% - 10px);
 
 					&:nth-child(even) {
