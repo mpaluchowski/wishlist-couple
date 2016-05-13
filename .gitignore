@@ -1,4 +1,8 @@
+### SASS ###
+.sass-cache
 *.css
+*.css.map
+
 data/*
 !data/*.dist
 
