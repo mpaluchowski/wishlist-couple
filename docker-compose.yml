@@ -1,0 +1,10 @@
+version: '2'
+services:
+  mm-wishlist:
+    build:
+      context: .
+    image: mpaluchowski/mm-wishlist
+    ports:
+      - 80:80
+    volumes:
+      - .:/var/www/html
