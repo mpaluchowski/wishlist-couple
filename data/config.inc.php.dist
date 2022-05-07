@@ -8,8 +8,7 @@ $title = 'My Wishlist';
 
 /* Google Analytics property settings, optional */
 /* $analytics = [
-	'id' => 'UA-1234567-89',
-	'domain' => 'example.com'
+	'id' => 'G-1234567890',
 ]; */
 
 /* A quote that'll appear before the introduction */
