@@ -1,4 +1,4 @@
-FROM php:7-apache
+FROM php:8-apache
 
 RUN a2enmod rewrite && a2enmod headers
 RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf
