@@ -16,7 +16,7 @@ $config = new \lib\Configuration();
     <link href='https://fonts.googleapis.com/css?family=Alegreya+Sans:100,300,400&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="screen.css">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="lib.js"></script>
     <script type="text/javascript">
         $(document).ready(function(){
